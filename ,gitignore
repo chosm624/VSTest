@@ -1,0 +1,21 @@
+# CMake 빌드 디렉토리
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# IDE 관련 파일
+.vscode/
+.idea/
+*.iml
+
+# 빌드 디렉터리 및 결과물
+build/
+bin/
+dist/
+out/
+*.o
+*.obj
+*.exe
+*.dll
+*.so
