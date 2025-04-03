@@ -1,0 +1,29 @@
+{
+    "version": 8,
+    "configurePresets": [
+        {
+            "name": "GCC 13-win32 x86_64-w64-mingw32",
+            "displayName": "GCC 13-win32 x86_64-w64-mingw32",
+            "description": "컴파일러를 사용하는 중: C = /usr/bin/x86_64-w64-mingw32-gcc, CXX = /usr/bin/x86_64-w64-mingw32-g++",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
+                "CMAKE_C_COMPILER": "/usr/bin/x86_64-w64-mingw32-gcc",
+                "CMAKE_CXX_COMPILER": "/usr/bin/x86_64-w64-mingw32-g++",
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        },
+        {
+            "name": "GCC 13.3.0 x86_64-linux-gnu",
+            "displayName": "GCC 13.3.0 x86_64-linux-gnu",
+            "description": "컴파일러를 사용하는 중: C = /usr/bin/gcc, CXX = /usr/bin/g++",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
+                "CMAKE_C_COMPILER": "/usr/bin/gcc",
+                "CMAKE_CXX_COMPILER": "/usr/bin/g++",
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        }
+    ]
+}
