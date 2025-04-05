@@ -25,16 +25,6 @@
                 "CMAKE_C_COMPILER": "/usr/bin/gcc",
                 "CMAKE_CXX_COMPILER": "/usr/bin/g++"
             }
-        },        {
-            "name": "GCC 13.3.0 x86_64-linux-gnu",
-            "displayName": "GCC 13.3.0 x86_64-linux-gnu",
-            "description": "컴파일러를 사용하는 중: C = /usr/bin/x86_64-linux-gnu-gcc, CXX = /usr/bin/x86_64-linux-gnu-g++",
-            "binaryDir": "${sourceDir}/out/build/Linux/${presetName}",
-            "cacheVariables": {
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
-                "CMAKE_C_COMPILER": "/usr/bin/x86_64-linux-gnu-gcc",
-                "CMAKE_CXX_COMPILER": "/usr/bin/x86_64-linux-gnu-g++"
-            }
         },
         {
             "name": "GCC 13-win32 x86_64-w64-mingw32",
@@ -71,18 +61,6 @@
             "name": "GCC 13.3.0 linux-gnu - Debug",
             "displayName": "GCC 13.3.0 - Debug",
             "configurePreset": "GCC 13.3.0 linux-gnu",
-            "configuration": "Debug"
-        },
-        {
-            "name": "GCC 13.3.0 x86_64-linux-gnu - Release",
-            "displayName": "GCC 13.3.0 x86_64-linux-gnu - Release",
-            "configurePreset": "GCC 13.3.0 x86_64-linux-gnu",
-            "configuration": "Release"
-        },
-        {
-            "name": "GCC 13.3.0 x86_64-linux-gnu - Debug",
-            "displayName": "GCC 13.3.0 x86_64-linux-gnu - Debug",
-            "configurePreset": "GCC 13.3.0 x86_64-linux-gnu",
             "configuration": "Debug"
         },
         {

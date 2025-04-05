@@ -13,10 +13,14 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 add_executable(VSTest main.cpp ${SRC_FILES})
 
 # 필요한 라이브러리 경로 정의
-set(REQUIRED_LIBS
-    "/usr/lib/gcc/x86_64-w64-mingw32/13-win32/libstdc++-6.dll"
-    "/usr/lib/gcc/x86_64-w64-mingw32/13-win32/libgcc_s_seh-1.dll"
-)
+if(UNIX)
+ if(CMAKE_C_COMPILER MATCHES "/usr/bin/x86_64-w64-mingw32-gcc" AND CMAKE_CXX_COMPILER MATCHES "/usr/bin/x86_64-w64-mingw32-g++")
+  set(REQUIRED_LIBS
+  "/usr/lib/gcc/x86_64-w64-mingw32/13-win32/libstdc++-6.dll"
+  "/usr/lib/gcc/x86_64-w64-mingw32/13-win32/libgcc_s_seh-1.dll"
+  )
+  endif()
+endif()
 
 foreach(lib ${REQUIRED_LIBS})
     add_custom_command(TARGET VSTest POST_BUILD
