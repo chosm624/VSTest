@@ -2,45 +2,59 @@
     "version": 8,
     "configurePresets": [
         {
-            "name": "GCC 13-win32 x86_64-w64-mingw32",
-            "displayName": "GCC 13-win32 x86_64-w64-mingw32",
-            "description": "컴파일러를 사용하는 중: C = /usr/bin/x86_64-w64-mingw32-gcc, CXX = /usr/bin/x86_64-w64-mingw32-g++",
-            "binaryDir": "${sourceDir}/out/build/${presetName}",
-            "cacheVariables": {
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
-                "CMAKE_C_COMPILER": "/usr/bin/x86_64-w64-mingw32-gcc",
-                "CMAKE_CXX_COMPILER": "/usr/bin/x86_64-w64-mingw32-g++",
-                "CMAKE_BUILD_TYPE": "Debug"
-            }
-        },
-        {
-            "name": "GCC 13.3.0 x86_64-linux-gnu",
-            "displayName": "GCC 13.3.0 x86_64-linux-gnu",
-            "description": "컴파일러를 사용하는 중: C = /usr/bin/gcc, CXX = /usr/bin/g++",
-            "binaryDir": "${sourceDir}/out/build/${presetName}",
-            "cacheVariables": {
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
-                "CMAKE_C_COMPILER": "/usr/bin/gcc",
-                "CMAKE_CXX_COMPILER": "/usr/bin/g++",
-                "CMAKE_BUILD_TYPE": "Debug"
-            }
-        },
-        {
             "name": "Visual Studio Community 2022 Release - amd64",
             "displayName": "Visual Studio Community 2022 Release - amd64",
             "description": "Visual Studio 17 2022(x64 아키텍처)에 대한 컴파일러를 사용하는 중",
             "generator": "Visual Studio 17 2022",
             "toolset": "host=x64",
             "architecture": "x64",
-            "binaryDir": "${sourceDir}/out/build/Windows/MSVC/${presetName}",
+            "binaryDir": "${sourceDir}/out/build/Windows/${presetName}",
             "cacheVariables": {
                 "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
                 "CMAKE_C_COMPILER": "cl.exe",
                 "CMAKE_CXX_COMPILER": "cl.exe"
             }
+        },
+        {
+            "name": "GCC 13.3.0 linux-gnu",
+            "displayName": "GCC 13.3.0 linux-gnu",
+            "description": "컴파일러를 사용하는 중: C = /usr/bin/gcc, CXX = /usr/bin/g++",
+            "binaryDir": "${sourceDir}/out/build/Linux/${presetName}",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
+                "CMAKE_C_COMPILER": "/usr/bin/gcc",
+                "CMAKE_CXX_COMPILER": "/usr/bin/g++"
+            }
+        },        {
+            "name": "GCC 13.3.0 x86_64-linux-gnu",
+            "displayName": "GCC 13.3.0 x86_64-linux-gnu",
+            "description": "컴파일러를 사용하는 중: C = /usr/bin/x86_64-linux-gnu-gcc, CXX = /usr/bin/x86_64-linux-gnu-g++",
+            "binaryDir": "${sourceDir}/out/build/Linux/${presetName}",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
+                "CMAKE_C_COMPILER": "/usr/bin/x86_64-linux-gnu-gcc",
+                "CMAKE_CXX_COMPILER": "/usr/bin/x86_64-linux-gnu-g++"
+            }
+        },
+        {
+            "name": "GCC 13-win32 x86_64-w64-mingw32",
+            "displayName": "GCC 13-win32 x86_64-w64-mingw32",
+            "description": "컴파일러를 사용하는 중: C = /usr/bin/x86_64-w64-mingw32-gcc, CXX = /usr/bin/x86_64-w64-mingw32-g++",
+            "binaryDir": "${sourceDir}/out/build/Windows/${presetName}",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
+                "CMAKE_C_COMPILER": "/usr/bin/x86_64-w64-mingw32-gcc",
+                "CMAKE_CXX_COMPILER": "/usr/bin/x86_64-w64-mingw32-g++"
+            }
         }
     ],
     "buildPresets": [
+        {
+            "name": "Visual Studio Community 2022 Release - amd64 - Release",
+            "displayName": "MSVC 2022 - amd64 - Release",
+            "configurePreset": "Visual Studio Community 2022 Release - amd64",
+            "configuration": "Release"
+        },
         {
             "name": "Visual Studio Community 2022 Release - amd64 - debug",
             "displayName": "MSVC 2022 - amd64 - Debug",
@@ -48,10 +62,28 @@
             "configuration": "Debug"
         },
         {
-            "name": "Visual Studio Community 2022 Release - amd64 - Release",
-            "displayName": "MSVC 2022 - amd64 - Release",
-            "configurePreset": "Visual Studio Community 2022 Release - amd64",
+            "name": "GCC 13.3.0 linux-gnu - Release",
+            "displayName": "GCC 13.3.0 - Release",
+            "configurePreset": "GCC 13.3.0 linux-gnu",
             "configuration": "Release"
+        },
+        {
+            "name": "GCC 13.3.0 linux-gnu - Debug",
+            "displayName": "GCC 13.3.0 - Debug",
+            "configurePreset": "GCC 13.3.0 linux-gnu",
+            "configuration": "Debug"
+        },
+        {
+            "name": "GCC 13.3.0 x86_64-linux-gnu - Release",
+            "displayName": "GCC 13.3.0 x86_64-linux-gnu - Release",
+            "configurePreset": "GCC 13.3.0 x86_64-linux-gnu",
+            "configuration": "Release"
+        },
+        {
+            "name": "GCC 13.3.0 x86_64-linux-gnu - Debug",
+            "displayName": "GCC 13.3.0 x86_64-linux-gnu - Debug",
+            "configurePreset": "GCC 13.3.0 x86_64-linux-gnu",
+            "configuration": "Debug"
         },
         {
             "name": "GCC 13-win32 x86_64-w64-mingw32 - Release",
