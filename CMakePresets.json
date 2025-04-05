@@ -43,15 +43,27 @@
     "buildPresets": [
         {
             "name": "Visual Studio Community 2022 Release - amd64 - debug",
-            "displayName": "Visual Studio Community 2022 Release - amd64 - Debug",
+            "displayName": "MSVC 2022 - amd64 - Debug",
             "configurePreset": "Visual Studio Community 2022 Release - amd64",
             "configuration": "Debug"
         },
         {
             "name": "Visual Studio Community 2022 Release - amd64 - Release",
-            "displayName": "Visual Studio Community 2022 Release - amd64 - Release",
+            "displayName": "MSVC 2022 - amd64 - Release",
             "configurePreset": "Visual Studio Community 2022 Release - amd64",
             "configuration": "Release"
+        },
+        {
+            "name": "GCC 13-win32 x86_64-w64-mingw32 - Release",
+            "displayName": "GCC 13 win32 mingw32 - x86_64 - Release",
+            "configurePreset": "GCC 13-win32 x86_64-w64-mingw32",
+            "configuration": "Release"
+        },
+        {
+            "name": "GCC 13-win32 x86_64-w64-mingw32 - Debug",
+            "displayName": "GCC 13 win32 mingw32 - x86_64 - Debug",
+            "configurePreset": "GCC 13-win32 x86_64-w64-mingw32",
+            "configuration": "Debug"
         }
     ]
 }
