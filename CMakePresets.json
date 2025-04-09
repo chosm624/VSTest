@@ -23,7 +23,21 @@
             "cacheVariables": {
                 "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
                 "CMAKE_C_COMPILER": "/usr/bin/gcc",
-                "CMAKE_CXX_COMPILER": "/usr/bin/g++"
+                "CMAKE_CXX_COMPILER": "/usr/bin/g++",
+                "CMAKE_BUILD_TYPE": ""
+            }
+        },
+        {
+            "name": "GCC 13.3.0 aarch64-linux-gnu",
+            "displayName": "GCC 13.3.0 aarch64-linux-gnu",
+            "description": "컴파일러를 사용하는 중: C = /usr/bin/aarch64-linux-gnu-gcc, CXX = /usr/bin/aarch64-linux-gnu-g++",
+            "binaryDir": "${sourceDir}/out/build/Linux/${presetName}",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
+                "CMAKE_SYSTEM_PROCESSOR": "aarch64",
+                "CMAKE_C_COMPILER": "/usr/bin/aarch64-linux-gnu-gcc",
+                "CMAKE_CXX_COMPILER": "/usr/bin/aarch64-linux-gnu-g++",
+                "CMAKE_BUILD_TYPE": ""
             }
         },
         {
@@ -34,7 +48,8 @@
             "cacheVariables": {
                 "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
                 "CMAKE_C_COMPILER": "/usr/bin/x86_64-w64-mingw32-gcc",
-                "CMAKE_CXX_COMPILER": "/usr/bin/x86_64-w64-mingw32-g++"
+                "CMAKE_CXX_COMPILER": "/usr/bin/x86_64-w64-mingw32-g++",
+                "CMAKE_BUILD_TYPE": ""
             }
         }
     ],
